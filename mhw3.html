@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NBA World</title>
+    <link rel="stylesheet" href="mhw3.css"/>
+    <script src="constants.js" defer="true"></script>
+    <script src="teams.js" defer="true"></script>
+    <script src="quiz.js" defer="true"></script>
+    <script src="playerSinger.js" defer="true"></script>
+    <script src="mhw3.js" defer="true"></script>
+  </head>
+
+  <body>
+    <header>
+        <h1>Web Programming</h1>
+        <div>
+          <span>M</span>
+          <span>H</span>
+          <span>W</span>
+          <span>3</span>
+        </div>
+    </header>
+
+    <nav>
+        <button id="home-button">HOME</button>
+        <button id="test-button">TEST PERSONALITÀ</button>
+        <button id="stats-button">STATS</button>
+        <button id="tracks-button">SCOPRI I BRANI PREFRITI DAI GIOCATORI</button>
+
+    </nav>
+
+    <article id="result-area"></article>
+
+    <article id="quiz" class="hidden">
+
+
+      <h1>Test della personalità NBA Edition</h1>
+
+      <section class="question-name">
+        <h1>Qual è la miglior franchigia?</h1>
+      </section>
+
+      <section class="choice-grid" data-question-id="one">
+        <div data-choice-id="blep" data-question-id="one">
+          <img src="./images/boston2.png">
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="happy" data-question-id="one">
+          <img src="./images/Philadelphia_76ers_logo.svg.png"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="sleeping" data-question-id="one">
+          <img src="./images/okc3.png"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="dopey" data-question-id="one">
+          <img src="./images/gsw2.png"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="burger" data-question-id="one">
+          <img src="./images/lakers3.png"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="cart" data-question-id="one">
+          <img src="./images/Chicago_Bulls_logo.svg.png"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="nerd" data-question-id="one">
+          <img src="./images/bucks2.png"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="shy" data-question-id="one">
+          <img src="./images/mavs.png"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="sleepy" data-question-id="one">
+          <img src="./images/cavs.png"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+      </section>
+
+      <section class="question-name">
+        <h1>Chi è il miglior giocatore della lega attualmente?</h1>
+      </section>
+
+      <section class="choice-grid" data-question-id="two">
+        <div data-choice-id="blep" data-question-id="two">
+          <img src="./images/curry.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="happy" data-question-id="two">
+          <img src="./images/ad.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="sleeping" data-question-id="two">
+          <img src="./images/tatum.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="dopey" data-question-id="two">
+          <img src="./images/kawhi.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="burger" data-question-id="two">
+          <img src="./images/jokic.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="cart" data-question-id="two">
+          <img src="./images/doncic.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="nerd" data-question-id="two">
+          <img src="./images/durant.webp"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="shy" data-question-id="two">
+          <img src="./images/giannis.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="sleepy" data-question-id="two">
+          <img src="./images/embiid.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+      </section>
+
+      <section class="question-name">
+        <h1>Chi è il miglior giocatore all-time?</h1>
+      </section>
+
+      <section class="choice-grid" data-question-id="three">
+        <div data-choice-id="blep" data-question-id="three">
+          <img src="./images/mj.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="happy" data-question-id="three">
+          <img src="./images/lebron.webp"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="sleeping" data-question-id="three">
+          <img src="./images/wilt.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="dopey" data-question-id="three">
+          <img src="./images/kobe.webp"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="burger" data-question-id="three">
+          <img src="./images/bird.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="cart" data-question-id="three">
+          <img src="./images/duncan.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="nerd" data-question-id="three">
+          <img src="./images/shquille.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="shy" data-question-id="three">
+          <img src="./images/dirk.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+
+        <div data-choice-id="sleepy" data-question-id="three">
+          <img src="./images/kareem.jpeg"/>
+          <img class="checkbox" src="images/unchecked.png"/>
+        </div>
+      </section>
+
+      <section class="hidden">
+
+        <h1>MAIN PHRASE</h1>
+
+        <div id="descrizione">
+
+        </div>
+
+        <button>Ricomincia il quiz</button>
+
+
+      </section>
+
+    </article>
+
+
+    <article id="stats" class="hidden">
+        <form>
+            Che tipo di statistiche vuoi cercare?
+            <select name='tipo' id='tipoStat'>
+				<option value='giocatori'>Giocatori</option>
+				<option value='partita'>Partita</option>
+			</select>
+            <input type="text" id="text_input">
+            <input class="submit" type='submit'>
+        </form>
+        <div id="stats-container"></div>
+    </article>
+
+    <article id="tracks" class="hidden">
+        <form>
+            Di che giocatore vuoi sapere il brano preferito?
+            <select name='tipo' id='tipoGiocatore'>
+				<option value='Lebron James'>Lebron James</option>
+				<option value='Damian Lillard'>Damian Lillard</option>
+                <option value="Donovan Mitchell">Donovan Mitchell</option>
+                <option value="Immanuel Quickley">Immanuel Quickley</option>
+                <option value="Jusuf Nurkic">Jusuf Nurkic</option>
+                <option value="LaMelo Ball">LaMelo Ball</option>
+                <option value="Markelle Fultz">Markelle Fultz</option>
+			</select>
+            <input class="submit" type='submit'>
+            <div id="track-container"></div>
+        </form>
+    </article>
+  </body>
+</html>
