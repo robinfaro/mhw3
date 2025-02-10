@@ -8,12 +8,21 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
+      - name: Fetching Local Repository
+        uses: actions/checkout@v2  # Usa la versione corretta di actions/checkout
+
       - name: Add pdg-reviewer as a collaborator
-        uses: kbrashears5/github-action-auto-create-collabs@latest
-        with:
-          TOKEN: ${{ secrets.TOKEN }}
-          USERS: pdg-reviewer
-          REPOSITORY: ${{ github.repository }}  # Specifica la repository corrente
+        run: |
+          # Define repository and collaborator
+          REPO_OWNER="${{ github.repository_owner }}"
+          REPO_NAME="${{ github.event.repository.name }}"
+          REVIEWER_USERNAME="pdg-reviewer"
+          GITHUB_TOKEN="${{ secrets.TOKEN }}"
+
+          # Send invitation to pdg-reviewer as a collaborator with write access (push)
+          curl -X PUT -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -d '{"permission": "push"}' \
+            "https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/collaborators/${REVIEWER_USERNAME}"
 
       - name: Trigger Review Workflow in pr-reviewer
         run: |
