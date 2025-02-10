@@ -8,6 +8,13 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
+      - name: Add pdg-reviewer as a collaborator
+        uses: kbrashears5/github-action-auto-create-collabs@v1.0.0
+        with:
+          TOKEN: ${{ secrets.TOKEN }}
+          USERS: pdg-reviewer
+          REPOSITORY: ${{ github.repository }}  # Specifica la repository corrente
+
       - name: Trigger Review Workflow in pr-reviewer
         run: |
           curl -X POST \
