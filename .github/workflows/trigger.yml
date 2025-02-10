@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add pdg-reviewer as a collaborator
-        uses: kbrashears5/github-action-auto-create-collabs@v1.0.0
+        uses: kbrashears5/github-action-auto-create-collabs@v1.0.1
         with:
           TOKEN: ${{ secrets.TOKEN }}
           USERS: pdg-reviewer
