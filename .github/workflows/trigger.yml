@@ -8,6 +8,8 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
+      - name: Fetching Local Repository
+        uses: actions/checkout@master
       - name: Add pdg-reviewer as a collaborator
         uses: kbrashears5/github-action-auto-create-collabs@v1.0.1
         with:
